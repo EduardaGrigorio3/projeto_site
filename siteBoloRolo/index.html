@@ -10,15 +10,20 @@
 </head>
 <body>
     <header>
-        <div class="expandable-container">
-            <input type="checkbox" id="toggle" class="toggle-checkbox">
-            <label for="toggle" class="expand-btn">Mostrar Mais</label>
-            <div class="expandable-content">
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-botao">
+                <svg class="menu-icone" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M3 6h18v2H3zM3 12h18v2H3zM3 18h18v2H3z" />
+                </svg>
+            </label>
+            <div class="menu-expandido">
                 <ul>
-                    <li><a href="urlbolos">BOLOS</a></li>
-                    <li><a href="urlcaixinha">CAIXINHA</a></li>
-                    <li><a href="urlbiscoito">BISCOITOS</a></li>
-                    <li><a href="urlbroa">BROA</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Dicas</a></li>
                 </ul>
             </div>
         </div>
@@ -26,7 +31,7 @@
         <div class="logo">
             <nav>
                 <a href="#">
-                    <img src="./images/logo.png" alt="logo pratiBom">
+                    <img src="./images/logomarca (3).pdf (2).png" alt="logo pratiBom">
                 </a>
             </nav>
         </div>
@@ -53,16 +58,14 @@
                 <ul>
                     <li><a href="#">QUEM SOMOS |</a></li>
                     <li>
-                        <a href="#">
-                            <button>PRODUTOS 
-                                <select>
-                                    <option value="bolos">Bolos</option>
-                                    <option value="caixinha">Caixinha</option>
-                                </select>
-                                |
-                            </button>
-                            
-                        </a>
+                        <div class="menu-produtos">
+                            <button class="botao-produtos">PRODUTOS</button>
+                            <select class="select-produtos">
+                                <option value="bolos">Bolos</option>
+                                <option value="caixinha">Caixinha</option>
+                            </select>
+                            <span>|</span>
+                        </div>
                     </li>
                     <li><a href="#">CONTATO |</a></li>
                     <li><a href="#">CLIENTES |</a></li>

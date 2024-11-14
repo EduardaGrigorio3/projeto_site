@@ -1,70 +1,150 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2px 10px; /* Padding mínimo */
+    justify-content: space-between;
+    padding: 10px 20px;
     border-bottom: 3px solid #9A0000;
-    /* Removendo min-height para altura automática */
+    position: relative;
+    height: 120px;
 }
 
-/* menu */
-.expandable-container {
+.menu-container {
     position: absolute;
-    left: 20px; 
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
-/* Centralizando o  logo */
-header .logo img{
-    height: 100px;
-    width: 100px;
-}
-
-/* Área do login e carrinho */
-header .lado-direito {
+.logo {
     position: absolute;
-    right: 20px; /*vai afastar carrinho e login da logo*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    z-index: 5;
+    overflow: visible;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(3);
+    transform-origin: center;
+    z-index: 5;
+}
+
+.lado-direito {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
-    gap: 5px; /* Espaço entre login e carrinho */
+    gap: 15px;
+    height: 100%;
+    z-index: 10;
 }
 
-header .login, .carrinho {
-    width: 20px; /* Tamanho dos ícones */
-    height: 20px;
+.login, .carrinho {
+    width: 25px;
+    height: 25px;
 }
 
-/* Estilo para a seção de opções */
 .opcoes {
-    margin-top: 5px; /* Um espaço entre o cabeçalho e as opções */
+    margin-top: 5px;
 }
 
-/* Definindo um layout flex para os itens ficarem ao lado */
 .opcoes nav ul {
     display: flex;
-    justify-content: center; /* Espaço igual entre os itens */
-    align-items: center; /* Alinha os itens verticalmente */
-    list-style: none; /* Remove os pontos da lista */
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
 
 .opcoes nav ul li {
-    margin: 0 5px; /* Espaço entre os itens */
+    margin: 0 5px;
 }
 
-.opcoes nav ul li a{
-    text-decoration: none; /* Espaço entre os itens */
+.opcoes nav ul li a {
+    text-decoration: none;
+    color: #000;
 }
 
-/* Estilo do botão de produtos */
-.opcoes button {
-    padding: 0px 0px;
+.botao-produtos {
+    padding: 0;
     border: none;
-    
+    background: none;
+    cursor: pointer;
 }
 
-.img-decorativa{
-    max-width: 100%;  /* A imagem ocupará no máximo 100% da largura do contêiner */
-    height: auto;     /* A altura será ajustada proporcionalmente */
-    display: block;   /* Remove qualquer espaço extra abaixo da imagem */
-    margin: 0 auto;   /* Opcional: centraliza a imagem horizontalmente */
+.select-produtos {
+    padding: 0;
+    margin-left: 5px;
 }
 
+.img-decorativa img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-expandido {
+    margin-top: 10px;
+    background-color: rgba(154, 0, 0, 0.9);
+    padding: 20px;
+    color: black;
+    border-radius: 4%;
+    width: max-content;
+    min-width: 100px;
+    max-width: 200px;
+    height: auto;
+    display: none;
+    z-index: 10;
+    position: absolute;
+}
+
+.menu-checkbox:checked + .menu-botao + .menu-expandido {
+    display: block;
+}
+
+.menu-expandido ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-expandido li {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.menu-expandido a {
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+
+.menu-expandido a:hover {
+    color: #003882;
+}
+
+.menu-icone {
+    width: 24px;
+    height: 24px;
+    fill: #9A0000;
+}
