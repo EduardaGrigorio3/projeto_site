@@ -1,0 +1,70 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 10px; /* Padding mínimo */
+    border-bottom: 3px solid #9A0000;
+    /* Removendo min-height para altura automática */
+}
+
+/* menu */
+.expandable-container {
+    position: absolute;
+    left: 20px; 
+}
+
+/* Centralizando o  logo */
+header .logo img{
+    height: 100px;
+    width: 100px;
+}
+
+/* Área do login e carrinho */
+header .lado-direito {
+    position: absolute;
+    right: 20px; /*vai afastar carrinho e login da logo*/
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre login e carrinho */
+}
+
+header .login, .carrinho {
+    width: 20px; /* Tamanho dos ícones */
+    height: 20px;
+}
+
+/* Estilo para a seção de opções */
+.opcoes {
+    margin-top: 5px; /* Um espaço entre o cabeçalho e as opções */
+}
+
+/* Definindo um layout flex para os itens ficarem ao lado */
+.opcoes nav ul {
+    display: flex;
+    justify-content: center; /* Espaço igual entre os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    list-style: none; /* Remove os pontos da lista */
+}
+
+.opcoes nav ul li {
+    margin: 0 5px; /* Espaço entre os itens */
+}
+
+.opcoes nav ul li a{
+    text-decoration: none; /* Espaço entre os itens */
+}
+
+/* Estilo do botão de produtos */
+.opcoes button {
+    padding: 0px 0px;
+    border: none;
+    
+}
+
+.img-decorativa{
+    max-width: 100%;  /* A imagem ocupará no máximo 100% da largura do contêiner */
+    height: auto;     /* A altura será ajustada proporcionalmente */
+    display: block;   /* Remove qualquer espaço extra abaixo da imagem */
+    margin: 0 auto;   /* Opcional: centraliza a imagem horizontalmente */
+}
+
