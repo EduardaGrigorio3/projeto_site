@@ -45,15 +45,17 @@ header {
     gap: 15px;
     height: 100%;
     z-index: 10;
+    color: #9A0000;
 }
 
 .login, .carrinho {
     width: 25px;
     height: 25px;
+    
 }
 
 .opcoes {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .opcoes nav ul {
@@ -69,7 +71,7 @@ header {
 
 .opcoes nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #9A0000;
 }
 
 .botao-produtos {
@@ -101,7 +103,7 @@ header {
     margin-top: 10px;
     background-color: rgba(154, 0, 0, 0.9);
     padding: 20px;
-    color: black;
+    color: white;
     border-radius: 4%;
     width: max-content;
     min-width: 100px;
@@ -147,4 +149,10 @@ header {
     width: 24px;
     height: 24px;
     fill: #9A0000;
+}
+
+.img-decorativa{
+    width: 1090px;   
+    height: 400px;
+    padding-top: 20px;
 }
