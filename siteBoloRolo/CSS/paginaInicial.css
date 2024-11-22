@@ -1,0 +1,206 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 3px solid #9A0000;
+    height: 120px;
+}
+
+.menu-container {
+    margin-top: 2%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.opcoes {
+    margin-top: 10px;
+}
+
+.opcoes nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.opcoes nav ul li {
+    margin: 0 5px;
+}
+
+.opcoes nav ul li a {
+    text-decoration: none;
+    color: #9A0000;
+}
+
+.botao-produtos {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.select-produtos {
+    padding: 0;
+    margin-left: 5px;
+}
+
+
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-expandido {
+    margin-top: 10px;
+    background-color: rgba(154, 0, 0, 0.9);
+    padding: 20px;
+    color: white;
+    border-radius: 4%;
+    width: max-content;
+    min-width: 100px;
+    max-width: 200px;
+    height: auto;
+    display: none;
+    z-index: 10;
+    position: absolute;
+}
+
+.menu-checkbox:checked+.menu-botao+.menu-expandido {
+    display: block;
+}
+
+.menu-expandido ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-expandido li {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.menu-expandido a {
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+
+.menu-expandido a:hover {
+    color: #003882;
+}
+
+.menu-icone {
+    width: 24px;
+    height: 24px;
+    fill: #9A0000;
+}
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 120px;
+    height: 90px;
+}
+
+.img-decorativa img{
+    width: 100%;
+    /* Adapta a largura da imagem */
+    height: auto;
+    /* Mantém a proporção */
+    padding-top: 20px;
+}
+
+.lado-direito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #9A0000;
+}
+
+.linha-com-texto {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* Largura total */
+    margin: 0;
+    /* Remove margens extras */
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.linha1, .linha2 {
+    flex-grow: 1;
+    /* Faz a linha ocupar o espaço disponível */
+    height: 3px;
+    /* Altura da linha */
+    background-color: #9A0000;
+    /* Cor da linha */
+}
+
+.texto {
+    font-size: 16px;
+    font-weight: bold;
+    color: #9A0000;
+    margin: 0 10px;
+    /* Espaço entre o texto e as linhas */
+}
+
+
+.destaque-produto a {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20%;
+    background: linear-gradient(5deg, rgba(0, 2, 8, 0.785) 23.83%, rgba(0, 0, 0, 0.10) 40%), url('/images/bolo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.destaque-produto img {
+    display: none;  /* Esconde a imagem para não interferir no fundo */
+}
+
+.texto-sobre-imagem {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;  /* Garante que o texto fique visível */
+}
+
+.carrinho{
+    position: relative;
+}
+
+.circulo-contador{
+    background-color: #9A0000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+
+    padding: 3px;
+    font-weight: 700;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -10px;
+    right: -12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -6,5 +6,7 @@
 
 /* Adicionando cor de fundo ao corpo da página */
 body {
+    margin: 0px;
+    padding: 0px;
     background-color: #FFFFFF;
 }
