@@ -6,7 +6,9 @@
 
 /* Adicionando cor de fundo ao corpo da página */
 body {
+    font-family: Arial, sans-serif;
     margin: 0px;
     padding: 0px;
     background-color: #FFFFFF;
+    
 }
