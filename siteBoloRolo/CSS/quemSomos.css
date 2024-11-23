@@ -1,5 +1,4 @@
 body {
-    
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -7,6 +6,7 @@ body {
     color: #333;
     min-height: 100vh;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -44,58 +44,6 @@ body {
     border-radius: 8px;
 }
 
-footer {
-    background: #9A0000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-.depoimentos {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
-    background-color: #f9f9f9;
-}
-
-.depoimento {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.depoimento:hover {
-    transform: translateY(-10px);
-}
-
-.depoimento p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-}
-
-.depoimento .nome {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #333;
-}
-
-.depoimento .local {
-    font-style: italic;
-    color: #888;
-}
 
 @media (max-width: 768px) {
     .container {
@@ -113,3 +61,5 @@ footer p {
         width: 100%;
     }
 }
+
+

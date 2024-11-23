@@ -1,0 +1,28 @@
+.localizacao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Garantir que o alinhamento vertical não afete o layout */
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 20px auto;
+    gap: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.endereco h1, .endereco p {
+    padding-top: 15px;
+    color: #9A0000;
+}
+
+.endereco p{
+    font-size: 15px;
+}
+
+.mapa-iframe {
+    border: 2px solid #9A0000;
+    border-radius: 30px;
+}
