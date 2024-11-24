@@ -1,3 +1,63 @@
+.container-alinhada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.caminho-navegacao {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+}
+
+.caminho-navegacao a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.caminho-navegacao a {
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+.caminho-navegacao a:hover {
+    color: #9A0000;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #9A0000;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003882;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+/*Produtos:*/
 section {
     margin-bottom: 40px;
 
@@ -8,12 +68,12 @@ section h2 {
     color: #fff;
     padding: 10px;
     text-align: center;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 section h3 {
     color: #9A0000;
-    
+
     margin-bottom: 20px;
 }
 
@@ -70,7 +130,6 @@ section h4 {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    /* Isso faz com que a imagem preencha a área sem distorcer */
     transition: opacity 0.3s ease;
 }
 
@@ -80,7 +139,7 @@ section h4 {
     left: 0;
     opacity: 0;
     z-index: 2;
-    /* Garante que a imagem hover fique acima da imagem original */
+
 }
 
 .imagem-container:hover .imagem-hover {
@@ -92,14 +151,14 @@ section h4 {
 }
 
 
-/* Estilo da descrição */
+
 .descricao {
     font-size: 0.9em;
     color: #666;
     margin: 10px 0;
 }
 
-/* Estilo do campo de quantidade */
+
 .quantidade-container {
     color: #003882;
     display: flex;
@@ -132,21 +191,15 @@ section h4 {
     background-color: #003882;
 }
 
-/* Estilos para os botões específicos */
-
-
-/* Estilo para o botão de carrinho */
+/*botões de comprar e carrinho*/
 .botao-container {
     display: flex;
     align-items: center;
-    /* Alinha verticalmente os botões */
-    justify-content: space-between;
-    /* Espaça uniformemente os botões */
 
-    margin-left: px;
-    /* Reduz a distância entre os botões */
+    justify-content: space-between;
+    margin-left: 100 px;
     margin-top: 10px;
-    /* Ajusta o espaçamento do container */
+
 }
 
 .btn-adicionar-carrinho {
@@ -185,12 +238,10 @@ section h4 {
     border: none;
     padding: 15px 20px;
     width: 80%;
-    /* Torna o botão de comprar mais largo */
     cursor: pointer;
     text-align: center;
     font-size: 1rem;
     border-radius: 5px;
-    /* Arredonda os cantos */
 }
 
 
@@ -229,17 +280,17 @@ label.btn-coracao:hover {
     background-color: #e60000;
 }
 
+
 .quantidade-e-opcoes-container {
     display: flex;
     justify-content: space-between;
-    /* Espaça as opções de quantidade e sabor */
     gap: 10px;
     flex-wrap: wrap;
-    /* Para ajustar o layout em telas menores */
+
 }
 
 
-/*Tratar os dois ultimos*/
+/*Tratar os dois ultimos produtos da seção BOLOS*/
 .quantidade-pequena {
     width: 60px;
     padding: 5px;
@@ -255,16 +306,11 @@ label.btn-coracao:hover {
 
 .quantidade-e-opcoes-container {
     display: flex;
-    /* Torna o container flexível */
     margin-left: 10px;
     flex-direction: row;
-    /* Alinha os itens em linha (lado a lado) */
     gap: 10px;
-    /* Define o espaço entre os botões */
     align-items: center;
-    /* Centraliza os itens verticalmente */
     justify-content: flex-start;
-    /* Mantém os botões alinhados à esquerda */
 
 }
 
@@ -280,4 +326,138 @@ label.btn-coracao:hover {
     width: 70px;
 
     font-size: 0.9em;
+}
+
+/*Parte de fazer encomenda*/
+
+.fazer-encomenda {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.fazer-encomenda p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.botao-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #25D366;
+
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-whatsapp img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+.botao-whatsapp:hover {
+    background-color: #1da851;
+
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .botao-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+
+    /* Container geral */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    /* Navegação */
+    .caminho-navegacao {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Ajuste para o botão de pesquisa */
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    /* Produto e layout de grid */
+    .produtos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .produto {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .produto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Botões de comprar e carrinho */
+    .botao-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-comprar {
+        width: 100%;
+    }
+
+    .btn-carrinho,
+    .btn-comprar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-carrinho:hover,
+    .btn-comprar:hover {
+        transform: scale(1);
+    }
+
+    /* Ajuste em texto */
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
 }

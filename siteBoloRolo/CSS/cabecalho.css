@@ -76,7 +76,7 @@ header {
     align-self: center;
     width: 120px;
     height: 90px;
-    margin-left: 30px; 
+    margin-left: 30px;
 }
 
 .lado-direito {
@@ -96,16 +96,93 @@ header {
     color: #fff;
     width: 20px;
     height: 20px;
-
     padding: 3px;
     font-weight: 700;
     border-radius: 50%;
-
     position: absolute;
     top: -10px;
     right: -12px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Ajustes para telas maiores */
+@media (min-width: 1600px) {
+    header {
+        padding: 10px 40px;
+        height: 140px;
+    }
+
+    .logo img {
+        width: 160px;
+        height: 120px;
+    }
+
+    .lado-direito {
+        gap: 20px;
+    }
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 1600px) and (min-width: 768px) {
+    header {
+        padding: 10px 30px;
+        height: 130px;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 105px;
+    }
+
+    .lado-direito {
+        gap: 15px;
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    .menu-container {
+        left: 0;
+        margin-top: 0;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 75px;
+        margin-left: 0;
+    }
+
+    .lado-direito {
+        gap: 5px;
+    }
+
+    .menu-expandido {
+        width: 100%;
+        max-width: none;
+    }
+
+    .menu-expandido li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu-expandido a {
+        font-size: 14px;
+    }
+
+    .circulo-contador {
+        width: 15px;
+        height: 15px;
+        top: -8px;
+        right: -8px;
+    }
 }
