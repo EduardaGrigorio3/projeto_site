@@ -7,7 +7,10 @@
     <title>Produtos | PratiBom</title>
     <link rel="stylesheet" href="./CSS/globals.css">
     <link rel="stylesheet" href="./CSS/paginaInicial.css">
+    <link rel="stylesheet" href="./CSS/cabecalho.css">
     <link rel="stylesheet" href="./CSS/Produto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -83,6 +86,209 @@
             </div>
         </section>
 
+
+        <section id="bolos">
+            <h2>Bolos</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao1" class="coracao-checkbox">
+                        <label for="coracao1" class="btn-coracao">&#9829;</label>
+                        <img src="./images/NackedCake.jpg" alt="Naked Cake" class="imagem-principal">
+                        <img src="./images/NackedCakeHover.jpg" alt="Bolo Tradicional" class="imagem-hover">
+
+                    </div>
+                    <h4>Naked Cake</h4>
+                    <h3>R$50,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-bolo1">Peso (kg):</label>
+                        <input type="number" id="quantidade-bolo1" min="0.5" step="0.5" value="0.5" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao2" class="coracao-checkbox">
+                        <label for="coracao2" class="btn-coracao">&#9829;</label>
+                        <img src="./images/BoloTradicional.jpg" alt="Bolo de rolo 500g">
+                    </div>
+                    <h4>Tradicional 500g</h4>
+                    <h3>R$16,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-bolo2">Quantidade:</label>
+                        <input type="number" id="quantidade-bolo2" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao3" class="coracao-checkbox">
+                        <label for="coracao3" class="btn-coracao">&#9829;</label>
+                        <img src="./images/bolo1kg.jpg" alt="Bolo trad 1kg">
+                    </div>
+                    <h4>Tradicional 1Kg</h4>
+                    <h3>R$27,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-bolo3">Quantidade:</label>
+                        <input type="number" id="quantidade-bolo3" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="produto">
+                    <div class="imagem-container"> <input type="checkbox" id="coracao4" class="coracao-checkbox"> <label
+                            for="coracao4" class="btn-coracao">&#9829;</label> <img src="./images/boloChocolate.jpg"
+                            alt="Bolo de Rolo chocolate e doce de leite 500g"> </div>
+                    <h4>Chocolate | <br>Doce de Leite 500g</h4>
+                    <h3>R$25,00</h3>
+                    <div class="quantidade-e-opcoes-container" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="quantidade-container"
+                            style="display: flex; flex-direction: column; align-items: center;"> <label
+                                for="quantidade-bolo4">Quantidade:</label> <input type="number" id="quantidade-bolo4"
+                                min="1" step="1.0" value="1" class="quantidade-pequena"> </div>
+                        <div class="opcoes-container"
+                            style="display: flex; flex-direction: column; align-items: center;"> <label
+                                for="opcao-bolo4">Sabores:</label> <select id="opcao-bolo4" class="opcoes-pequena">
+                                <option value="chocolate">----</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="doce-de-leite">Doce de Leite</option>
+                            </select> </div>
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <div class="produto">
+                    <div class="imagem-container"> <input type="checkbox" id="coracao5" class="coracao-checkbox"> <label
+                            for="coracao5" class="btn-coracao">&#9829;</label> <img src="./images/boloChocolate.jpg"
+                            alt="Bolo trad 1kg"> </div>
+                    <h4>Chocolate | <br>Doce de Leite 1Kg</h4>
+                    <h3>1Kg | R$45,00</h3>
+                    <div class="quantidade-e-opcoes-container" style="display: flex; align-items: center; gap: 10px;">
+                        <div class="quantidade-container"
+                            style="display: flex; flex-direction: column; align-items: center;"> <label
+                                for="quantidade-bolo5">Quantidade:</label> <input type="number" id="quantidade-bolo5"
+                                min="1" step="1" value="1" class="quantidade-pequena"> </div>
+                        <div class="opcoes-container"
+                            style="display: flex; flex-direction: column; align-items: center;"> <label
+                                for="opcao-bolo5">Sabores:</label> <select id="opcao-bolo5" class="opcoes-pequena">
+                                <option value="chocolate">----</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="doce-de-leite">Doce de Leite</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="mini-bolinhos">
+            <h2>Caixinhas</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao6" class="coracao-checkbox">
+                        <label for="coracao6" class="btn-coracao">&#9829;</label>
+                        <img src="./images/boloTradicional.jpg" alt="Mini bolo de rolo">
+                    </div>
+                    <h4>Caixa Mini Bolo 250g |<br> 5 unidades de 50g </h4>
+                    <h3>R$10,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-mini1">Quantidade:</label>
+                        <input type="number" id="quantidade-mini1" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao7" class="coracao-checkbox">
+                        <label for="coracao7" class="btn-coracao">&#9829;</label>
+                        <img src="./images/BoloTradicional.jpg" alt="Mini bolo de rolo">
+                    </div>
+                    <h4>Caixa Mini Bolo 1kg | <br>10 unidades de 100g</h4>
+                    <h3>R$35,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-mini2">Quantidade:</label>
+                        <input type="number" id="quantidade-mini2" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <section id="biscoitos">
+            <h2>Biscoitos</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao8" class="coracao-checkbox">
+                        <label for="coracao8" class="btn-coracao">&#9829;</label>
+                        <img src="./images/biscoito.jpg" alt="Biscoito bolo de rolo">
+                    </div>
+                    <h4>Biscoito de Bolo de Rolo 170g</h4>
+                    <h3>R$10,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-biscoito1">Quantidade:</label>
+                        <input type="number" id="quantidade-biscoito1" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+                <div class="produto">
+                    <div class="imagem-container">
+                        <input type="checkbox" id="coracao9" class="coracao-checkbox">
+                        <label for="coracao9" class="btn-coracao">&#9829;</label>
+                        <img src="./images/Broa1.jpg" alt="biscoito de bolo de rolo">
+                    </div>
+                    <h4>Broa de Bolo de Rolo <br>140g</h4>
+                    <h3>R$6,00</h3>
+                    <div class="quantidade-container">
+                        <label for="quantidade-biscoito2">Quantidade:</label>
+                        <input type="number" id="quantidade-biscoito2" min="1" step="1.0" value="1" class="quantidade">
+                    </div>
+                    <div class="botao-container">
+                        <button class="btn-comprar">Comprar</button>
+                        <button class="btn-carrinho"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
         <article>
             <div class="siga-rede-social">
                 <nav>
@@ -103,44 +309,48 @@
                     </a>
                 </nav>
             </div>
+
         </article>
-    
-        <footer class="rodape">
-            <div class="menu-rodape">
-    
-                <div class="logo-pratiBom">
-                    <img src="images/logoPratiBom.png" alt="logo marca da PratiBom">
-                </div>
-    
-                <div class="navegacao">
-                    <h1>PratiBom</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="quemSomos.html">QUEM SOMOS</a></li>
-                            <li><a href="produto.html">PRODUTOS</a></li>
-                            <li><a href="contato.html">CONTATO</a></li>
-                            <li><a href="clientes.html">CLIENTES</a></li>
-                            <li><a href="dicas.html">DICAS</a></li>
-                        </ul>
-                    </nav>
-                </div>
-    
-                <div class="contato">
-                    <h1>Contato</h1>
-                    <p>
-                        <ul>
-                            <li>Cel: (87) 9xxxx-xxxx</li>
-                            <li>E-mail: pratibom@gmail.com</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </footer>
-    
-        <footer class="rodape-final">
-            <p>&copy; 2024 PratiBom. Todos os direitos reservados.</p>
-        </footer>
+
+
+
+
     </main>
+    <footer class="rodape">
+        <div class="menu-rodape">
+
+            <div class="logo-pratiBom">
+                <img src="images/logoPratiBom.png" alt="logo marca da PratiBom">
+            </div>
+
+            <div class="navegacao">
+                <h1>PratiBom</h1>
+                <nav>
+                    <ul>
+                        <li><a href="quemSomos.html">QUEM SOMOS</a></li>
+                        <li><a href="produto.html">PRODUTOS</a></li>
+                        <li><a href="contato.html">CONTATO</a></li>
+                        <li><a href="clientes.html">CLIENTES</a></li>
+                        <li><a href="dicas.html">DICAS</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="contato">
+                <h1>Contato</h1>
+                <p>
+                <ul>
+                    <li>Cel: (87) 9xxxx-xxxx</li>
+                    <li>E-mail: pratibom@gmail.com</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="rodape-final">
+        <p>&copy; 2024 PratiBom. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 

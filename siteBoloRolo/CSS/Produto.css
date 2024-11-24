@@ -1,0 +1,283 @@
+section {
+    margin-bottom: 40px;
+
+}
+
+section h2 {
+    background-color: #003882;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 75px;
+}
+
+section h3 {
+    color: #9A0000;
+    
+    margin-bottom: 20px;
+}
+
+section h4 {
+    margin-top: 15px;
+    color: #9A0000;
+    margin-bottom: 15px;
+}
+
+.opcoes-container {
+    color: #003882;
+
+}
+
+
+/* Flexbox container para produtos */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.produto {
+    background-color: #fff;
+    border: 2px solid #9A0000;
+    border-radius: 15px;
+    padding: 20px;
+    height: auto;
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.2),
+
+        0 10px 15px rgba(0, 0, 0, 0.2),
+        /* Sombra inferior */
+        -10px 0 15px rgba(0, 0, 0, 0.2),
+
+        10px 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.imagem-container {
+    position: relative;
+}
+
+.imagem-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* Isso faz com que a imagem preencha a área sem distorcer */
+    transition: opacity 0.3s ease;
+}
+
+.imagem-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    /* Garante que a imagem hover fique acima da imagem original */
+}
+
+.imagem-container:hover .imagem-hover {
+    opacity: 1;
+}
+
+.imagem-container:hover .imagem-principal {
+    opacity: 0;
+}
+
+
+/* Estilo da descrição */
+.descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Estilo do campo de quantidade */
+.quantidade-container {
+    color: #003882;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantidade-container label {
+    color: #003882;
+    margin-right: 10px;
+}
+
+.quantidade {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.produto button {
+    background-color: #9A0000;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.produto button:hover {
+    background-color: #003882;
+}
+
+/* Estilos para os botões específicos */
+
+
+/* Estilo para o botão de carrinho */
+.botao-container {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os botões */
+    justify-content: space-between;
+    /* Espaça uniformemente os botões */
+
+    margin-left: px;
+    /* Reduz a distância entre os botões */
+    margin-top: 10px;
+    /* Ajusta o espaçamento do container */
+}
+
+.btn-adicionar-carrinho {
+    background-color: #fff;
+}
+
+.btn-carrinho {
+    background-color: transparent;
+    border: 2px solid #9A0000;
+    border-radius: 5px;
+    color: #9A0000;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+}
+
+.btn-carrinho:hover {
+    background-color: #9A0000;
+    color: #fff;
+
+    transform: scale(0.8);
+
+}
+
+/* Classe para o ícone */
+.fa-shopping-cart {
+    font-size: 1.5em;
+}
+
+
+.btn-comprar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    width: 80%;
+    /* Torna o botão de comprar mais largo */
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    /* Arredonda os cantos */
+}
+
+
+/* Estilos para o botão de coração */
+.coracao-checkbox {
+    display: none;
+}
+
+.btn-coracao {
+    background-color: transparent;
+    color: #e60000;
+    border: 2px solid #e60000;
+    border-radius: 50%;
+    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+
+input.coracao-checkbox:checked+label.btn-coracao {
+    color: #ffffff;
+    background-color: #e60000;
+}
+
+label.btn-coracao:hover {
+    color: #ffffff;
+    background-color: #e60000;
+}
+
+.quantidade-e-opcoes-container {
+    display: flex;
+    justify-content: space-between;
+    /* Espaça as opções de quantidade e sabor */
+    gap: 10px;
+    flex-wrap: wrap;
+    /* Para ajustar o layout em telas menores */
+}
+
+
+/*Tratar os dois ultimos*/
+.quantidade-pequena {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.opcoes-pequena {
+    padding: 4px;
+    border: 1px solid #003882;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.quantidade-e-opcoes-container {
+    display: flex;
+    /* Torna o container flexível */
+    margin-left: 10px;
+    flex-direction: row;
+    /* Alinha os itens em linha (lado a lado) */
+    gap: 10px;
+    /* Define o espaço entre os botões */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+    justify-content: flex-start;
+    /* Mantém os botões alinhados à esquerda */
+
+}
+
+.quantidade-pequena {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.opcoes-pequena {
+    padding: 6px;
+    border: 1px solid #003882;
+    width: 70px;
+
+    font-size: 0.9em;
+}
