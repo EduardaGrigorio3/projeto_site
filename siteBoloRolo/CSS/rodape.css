@@ -1,0 +1,115 @@
+/*Aqui tem Rodapé de quase todas as páginas e algumas estilizações proximas ao rodapé que estão na maioria das paginas*/
+.siga-rede-social {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9A0000;
+    color: white;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.siga-rede-social a {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 5px;
+}
+
+.siga-rede-social h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.siga-rede-social svg {
+    margin-left: 8px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+    margin-top: 30px;
+    color: #9A0000;
+}
+
+.menu-rodape {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.logo-pratiBom {
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.logo-pratiBom img {
+    width: 150px;
+    height: auto;
+}
+
+.navegacao,
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navegacao h1,
+.contato h1 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.navegacao ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao li {
+    margin-bottom: 5px;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #9A0000;
+    font-size: 12px;
+}
+
+.contato ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contato li {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.rodape-final {
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9A0000;
+    color: white;
+    font-size: 12px;
+}
+
+.rodape-final p {
+    margin: 0;
+    line-height: 40px;
+}

@@ -1,7 +1,7 @@
 .localizacao {
     display: flex;
     justify-content: space-around;
-    align-items: center; /* Garantir que o alinhamento vertical não afete o layout */
+    align-items: center; 
     flex-wrap: wrap;
     width: 95%;
     margin: 20px auto;

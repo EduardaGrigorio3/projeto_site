@@ -1,0 +1,36 @@
+.dicas-consumo,
+.dicas-combinacao,
+.dicas-conservacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background: #9a0000e7;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consumo,
+.combinacao,
+.conservacao {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.dicas-consumo:hover,
+.dicas-combinacao:hover,
+.dicas-conservacao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}

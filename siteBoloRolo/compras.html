@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compras | PratiBom</title>
     <link rel="stylesheet" href="./CSS/globals.css">
-    <link rel="stylesheet" href="./CSS/paginaInicial.css">
+    <link rel="stylesheet" href="./CSS/rodape.css">
     <link rel="stylesheet" href="./CSS/compras.css">
     <link rel="stylesheet" href="./CSS/cabecalho.css">
 </head>
@@ -84,7 +84,72 @@
             </div>
         </section>
 
-        <section>
+        <section class="container-carrinho">
+            <h1 id="titulo-carrinho">MEU CARRINHO</h1>
+            <div class="finalizar-compra-carrinho">
+                <div class="titulo-produto">
+                    <div class="coluna">
+                        <h2>PRODUTO</h2>
+                    </div>
+                    <div class="coluna">
+                        <h2>QUANTIDADE</h2>
+                    </div>
+                    <div class="coluna">
+                        <h2>LIXEIRA</h2>
+                    </div>
+                </div>
+
+                <div class="produto-container">
+                    <div class="coluna">
+                        <img src="images/boloMenor.jpg" alt="produto Bolo de rolo de 1k">
+                        <p>Bolo de rolo 1kg</p>
+                    </div>
+
+                    <div class="coluna">
+                        <div class="botao-quantidade-produto">
+                            <button class="btn-diminuir" onclick="alterarQuantidade(-1)">−</button>
+                            <span id="quantidade">1</span>
+                            <button class="btn-aumentar" onclick="alterarQuantidade(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="coluna">
+                        <p>Excluir produto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cupom-desconto">
+            <div class="desconto">
+                <p>CUPOM DE DESCONTO</p>
+                <input id="numero-cupom" type="text">
+                <button id="adicionar-cupom">Adicionar</button>
+            </div>
+        </section>
+
+        <div class="finalizar-compra">
+            <table class="resumo-tabela">
+                <tr>
+                    <td class="label">Subtotal:</td>
+                    <td class="valor">R$ 27,00</td>
+                </tr>
+                <tr>
+                    <td class="label">Entrega:</td>
+                    <td class="valor">R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td class="label">Total:</td>
+                    <td class="valor-total">R$ 32,00</td>
+                </tr>
+            </table>
+
+            <button class="botao-finalizar">Finalizar Compra</button>
+        </div>
+
+
+        <article>
             <div class="siga-rede-social">
                 <nav>
                     <a href="https://www.instagram.com/pratibom?igsh=Y3VqMWY5ZGxmaDE4">
@@ -104,44 +169,42 @@
                     </a>
                 </nav>
             </div>
-        </section>
-
-        <footer class="rodape">
-            <div class="menu-rodape">
-
-                <div class="logo-pratiBom">
-                    <img src="images/logoPratiBom.png" alt="logo marca da PratiBom">
-                </div>
-
-                <div class="navegacao">
-                    <h1>PratiBom</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="quemSomos.html">QUEM SOMOS</a></li>
-                            <li><a href="produto.html">PRODUTOS</a></li>
-                            <li><a href="contato.html">CONTATO</a></li>
-                            <li><a href="clientes.html">CLIENTES</a></li>
-                            <li><a href="dicas.html">DICAS</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="contato">
-                    <h1>Contato</h1>
-                    <p>
-                    <ul>
-                        <li>Cel: (87) 9xxxx-xxxx</li>
-                        <li>E-mail: pratibom@gmail.com</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <footer class="rodape-final">
-            <p>&copy; 2024 PratiBom. Todos os direitos reservados.</p>
-        </footer>
+        </article>
     </main>
+    <footer class="rodape">
+        <div class="menu-rodape">
+
+            <div class="logo-pratiBom">
+                <img src="images/logoPratiBom.png" alt="logo marca da PratiBom">
+            </div>
+
+            <div class="navegacao">
+                <h1>PratiBom</h1>
+                <nav>
+                    <ul>
+                        <li><a href="quemSomos.html">QUEM SOMOS</a></li>
+                        <li><a href="produto.html">PRODUTOS</a></li>
+                        <li><a href="contato.html">CONTATO</a></li>
+                        <li><a href="clientes.html">CLIENTES</a></li>
+                        <li><a href="dicas.html">DICAS</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="contato">
+                <h1>Contato</h1>
+                <p>
+                <ul>
+                    <li>Cel: (87) 9xxxx-xxxx</li>
+                    <li>E-mail: pratibom@gmail.com</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <footer class="rodape-final">
+        <p>&copy; 2024 PratiBom. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 

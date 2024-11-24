@@ -1,3 +1,4 @@
+/*Aqui tem o cabeçalho de quase todos as páginas, exceto, login. Também tem estilizaão de itens proximos ao cabeçalho e que tambem estão em quase todas as páginas*/
 header {
     display: flex;
     align-items: center;
@@ -5,6 +6,33 @@ header {
     padding: 10px 20px;
     border-bottom: 3px solid #9A0000;
     height: 120px;
+}
+
+.menu-container {
+    margin-top: 2%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.opcoes {
+    margin-top: 10px;
+}
+
+.opcoes nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.opcoes nav ul li {
+    margin: 0 5px;
+}
+
+.opcoes nav ul li a {
+    text-decoration: none;
+    color: #9A0000;
 }
 
 .menu-container {

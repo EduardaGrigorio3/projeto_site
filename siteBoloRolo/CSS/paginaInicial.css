@@ -1,29 +1,6 @@
-.opcoes {
-    margin-top: 10px;
-}
-
-.opcoes nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-.opcoes nav ul li {
-    margin: 0 5px;
-}
-
-.opcoes nav ul li a {
-    text-decoration: none;
-    color: #9A0000;
-}
-
-
 .img-decorativa img {
     width: 100%;
-    /* Adapta a largura da imagem */
     height: auto;
-    /* Mantém a proporção */
     padding-top: 20px;
 }
 
@@ -31,9 +8,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    /* Largura total */
     margin: 0;
-    /* Remove margens extras */
     padding-top: 40px;
     padding-bottom: 20px;
 }
@@ -41,11 +16,8 @@
 .linha1,
 .linha2 {
     flex-grow: 1;
-    /* Faz a linha ocupar o espaço disponível */
     height: 3px;
-    /* Altura da linha */
     background-color: #9A0000;
-    /* Cor da linha */
 }
 
 .texto {
@@ -53,22 +25,15 @@
     font-weight: bold;
     color: #9A0000;
     margin: 0 50px;
-    /* Espaço entre o texto e as linhas */
 }
 
 .destaque-produto nav ul {
     display: flex;
-    /* Coloca os itens lado a lado */
     list-style: none;
-    /* Remove os marcadores de lista */
     padding: 0;
-    /* Remove o preenchimento padrão da lista */
     margin: 0;
-    /* Remove as margens padrão */
     gap: 20px;
-    /* Espaçamento entre os itens */
     justify-content: center;
-    /* Centraliza os itens horizontalmente */
     padding-top: 30px;
     padding-bottom: 20px;
 }
@@ -78,7 +43,6 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-    /* Alinha os textos verticalmente */
     width: 215px;
     height: 280px;
     overflow: hidden;
@@ -91,12 +55,10 @@
 
 .destaque-produto img {
     display: none;
-    /* Continua escondendo a tag <img> */
 }
 
 .texto-sobre-imagem {
     margin-bottom: 8px;
-    /* Espaçamento entre "BOLO" e "SAIBA MAIS" */
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -106,187 +68,9 @@
 .texto-saiba-mais {
     color: white;
     background-color: #9A0000;
-    /* Cor de fundo */
     padding: 4px 15px;
-    /* Espaçamento interno */
     border-radius: 10px;
-    /* Bordas arredondadas */
     font-size: 10px;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-
-.carrinho {
-    position: relative;
-}
-
-.circulo-contador {
-    background-color: #9A0000;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-
-    padding: 3px;
-    font-weight: 700;
-    border-radius: 50%;
-
-    position: absolute;
-    top: -10px;
-    right: -12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.siga-rede-social {
-    width: 100%;
-    height: 50px;
-    /* Ajuste de altura */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #9A0000;
-    color: white;
-    margin-top: 40px;
-    gap: 10px;
-    /* Ajuste do espaçamento entre o texto e o ícone */
-}
-
-.siga-rede-social a {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    /* Garante que o ícone e o texto fiquem alinhados verticalmente */
-    text-decoration: none;
-    /* Remove o sublinhado do link */
-    color: white;
-    /* Garante que o texto seja branco */
-    gap: 5px;
-}
-
-.siga-rede-social h1 {
-    margin: 0;
-    /* Remove qualquer margem do título */
-    font-size: 18px;
-    /* Ajuste o tamanho da fonte, se necessário */
-    font-weight: bold;
-}
-
-.siga-rede-social svg {
-    margin-left: 8px;
-    /* Ajuste o espaçamento entre o texto e o ícone */
-}
-
-.rodape {
-    display: flex;
-    justify-content: space-between;
-    /* Distribui os itens horizontalmente */
-    align-items: flex-start;
-    /* Alinha os itens no topo */
-    padding: 20px 0;
-    /* Espaçamento para o footer */
-    margin-top: 30px;
-    color: #9A0000;
-}
-
-.menu-rodape {
-    display: flex;
-    justify-content: space-evenly;
-    /* Distribui as seções horizontalmente */
-    width: 100%;
-}
-
-.logo-pratiBom {
-    display: flex;
-    align-items: center;
-    /* Garante que a logo fique alinhada verticalmente */
-    margin-left: -20px;
-    /* Ajuste para mover a logo mais para a esquerda */
-}
-
-.logo-pratiBom img {
-    width: 150px;
-    /* Ajuste o tamanho da logo conforme necessário */
-    height: auto;
-}
-
-.navegacao,
-.contato {
-    display: flex;
-    flex-direction: column;
-    /* Coloca os itens na vertical */
-    align-items: flex-start;
-    /* Alinha o conteúdo à esquerda */
-}
-
-.navegacao h1,
-.contato h1 {
-    margin: 0;
-    /* Remove a margem padrão dos h1 */
-    font-size: 20px;
-    /* Ajuste o tamanho conforme necessário */
-    margin-bottom: 10px;
-    /* Adiciona espaço entre o h1 e a lista */
-}
-
-/* Remove os pontos e a linha da lista */
-.navegacao ul {
-    list-style-type: none;
-    /* Remove os pontos */
-    padding: 0;
-    /* Remove o preenchimento padrão */
-    margin: 0;
-    /* Remove a margem */
-}
-
-.navegacao li {
-    margin-bottom: 5px;
-    /* Adiciona um pequeno espaçamento entre os itens da lista */
-}
-
-/* Remove o sublinhado dos links */
-.navegacao a {
-    text-decoration: none;
-    /* Remove o sublinhado */
-    color: #9A0000;
-    font-size: 12px;
-}
-
-.contato ul {
-    list-style-type: none;
-    /* Remove os pontos */
-    padding: 0;
-    /* Remove o preenchimento padrão */
-    margin: 0;
-    /* Remove a margem */
-}
-
-.contato li {
-    margin-bottom: 5px;
-    /* Adiciona um pequeno espaçamento entre os itens da lista */
-    font-size: 12px;
-}
-
-.rodape-final {
-    bottom: 0;
-    /* Fixa o rodapé na parte inferior */
-    width: 100%;
-    height: 40px;
-    /* Ajuste a altura conforme necessário */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #9A0000;
-    color: white;
-    font-size: 12px;
-}
-
-
-.rodape-final p {
-    margin: 0;
-    /* Remove margens do p */
-    line-height: 40px;
-    /* Ajusta a altura da linha */
 }
