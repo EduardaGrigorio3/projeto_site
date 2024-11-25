@@ -1,6 +1,7 @@
 .localizacao {
     display: flex;
     justify-content: space-around;
+    
     align-items: center; 
     flex-wrap: wrap;
     width: 95%;
@@ -13,20 +14,31 @@
     
 }
 
+
 .endereco h1 {
     padding-top: 15px;
     color: #9A0000;
 }
-.endereco p{
+.endereco  p{
     color: #9A0000;
-}
-.endereco h3{
-    margin-top: 30px;
-}
-
-.endereco p{
     font-size: 15px;
 }
+.contatos h2 {
+    padding-top: 15px;
+    color: #9A0000;
+    margin-bottom: 25px;
+}
+.contatos  p{
+    color: #9A0000;
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+.endereco h3{
+    margin-top: 25px;
+}
+
+
 
 .mapa-iframe {
     border: 2px solid #9A0000;

@@ -97,17 +97,17 @@ section h4 {
     justify-content: center;
     margin-top: 50px;
 }
-
 .produto {
     background-color: #fff;
-    border: 2px solid #9A0000;
-    border-radius: 15px;
+    border-radius: 15px; 
     padding: 20px;
-    height: auto;
     width: 250px;
     text-align: center;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .produto:hover {
     transform: translateY(-10px);
