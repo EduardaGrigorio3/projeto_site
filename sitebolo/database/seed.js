@@ -13,7 +13,7 @@ const produtos = [
     { id: 7, tipo: "biscoito", img: "./images/biscoito.jpg", nome: "Biscoito de Bolo de Rolo 170g", preco: 10.00, sabor: null, unidade: "Quantidade" },
     { id: 8, tipo: "biscoito", img: "./images/Broa1.jpg", nome: "Broa de Bolo de Rolo 140g", preco: 6.00, sabor: null, unidade: "Quantidade" },
 
-]
+];
 async function adicionarProdutos() {
     for (let x = 0; x < produtos.length; x++){
         await db.run(
@@ -29,7 +29,8 @@ async function adicionarProdutos() {
                 produtos[x].unidade,
     
             ]
-        )
+        );
+        
     }
 }
 
