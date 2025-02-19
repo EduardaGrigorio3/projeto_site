@@ -1,4 +1,4 @@
-.container-alinhada {
+.containerPesquisa-alinhada {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,6 +10,7 @@
     align-items: center;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    justify-content: center;
     color: #555;
 }
 
@@ -73,9 +74,9 @@ section h2 {
 
 section h3 {
     color: #9A0000;
-
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
+
 
 section h4 {
     margin-top: 15px;
@@ -87,8 +88,6 @@ section h4 {
     color: #003882;
 
 }
-
-
 /* Flexbox container para produtos */
 .produtos-container {
     display: flex;
@@ -97,14 +96,15 @@ section h4 {
     justify-content: center;
     margin-top: 50px;
 }
+
 .produto {
     background-color: #fff;
-    border-radius: 15px; 
+    border-radius: 15px;
     padding: 20px;
     width: 250px;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -131,6 +131,7 @@ section h4 {
     height: 200px;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    border-radius: 7px;
 }
 
 .imagem-hover {
@@ -149,33 +150,46 @@ section h4 {
 .imagem-container:hover .imagem-principal {
     opacity: 0;
 }
-
-
-
-.descricao {
-    font-size: 0.9em;
-    color: #666;
-    margin: 10px 0;
-}
-
-
-.quantidade-container {
-    color: #003882;
+.nome-e-preco-container{
     display: flex;
-    align-items: center;
+    margin: 10px 10px;
     justify-content: center;
-    margin: 10px 0;
-}
+    flex-direction: column;
 
-.quantidade-container label {
+}
+.quantidade-e-opcoes-container{
+    
+    display: flex;
     color: #003882;
-    margin-right: 10px;
+    margin: 20px 20px;
+    justify-content: center;
+}
+.quantidade-container {
+    width: 100px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
 }
 
 .quantidade {
     width: 60px;
-    padding: 5px;
-    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #0056b3;
+    border-width: 1.5px;
+}
+.opcoesSabores-container{
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+.opcoesSabores{
+    color: #003882;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #003882;
 }
 
 .produto button {
@@ -194,8 +208,6 @@ section h4 {
 /*botões de comprar e carrinho*/
 .botao-container {
     display: flex;
-    align-items: center;
-
     justify-content: space-between;
     margin-left: 100 px;
     margin-top: 10px;
@@ -281,52 +293,7 @@ label.btn-coracao:hover {
 }
 
 
-.quantidade-e-opcoes-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
 
-}
-
-
-/*Tratar os dois ultimos produtos da seção BOLOS*/
-.quantidade-pequena {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-}
-
-.opcoes-pequena {
-    padding: 4px;
-    border: 1px solid #003882;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-.quantidade-e-opcoes-container {
-    display: flex;
-    margin-left: 10px;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-
-}
-
-.quantidade-pequena {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-}
-
-.opcoes-pequena {
-    padding: 6px;
-    border: 1px solid #003882;
-    width: 70px;
-
-    font-size: 0.9em;
-}
 
 /*Parte de fazer encomenda*/
 

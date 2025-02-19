@@ -12,3 +12,33 @@ body {
     background-color: #FFFFFF;
     
 }
+/*link do paginaAtual>paginaInicial*/
+.caminho-navegacao {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+
+}
+
+.caminho-navegacao-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+.caminho-navegacao a {
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+.caminho-navegacao a:hover {
+    color: #9A0000;
+}
+
+.caminho-navegacao span {
+    margin: 0 5px;
+    color: #555;
+}
