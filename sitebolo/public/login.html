@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/paginaInicial.css">
     <link rel="stylesheet" href="./CSS/login.css">
     <link rel="stylesheet" href="./CSS/cabecalho.css">
+    
 </head>
 
 <body>
@@ -82,16 +83,17 @@
         <div class="container">
             <div class="login-cliente">
                 <h1 class="titulo">Login</h1>
-                <form>
-                    <input type="text" placeholder="Usuário">
-                    <input type="password" placeholder="Senha">
-                    <button class="butao-entrar">Entrar</button>
+                <form id="formLogin">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Senha" required>
+                    <button type="submit" class="botao-login">Entrar</button>
                 </form>
                 <div class="container-login">
-                <a >Esqueceu sua senha?</a>
-                <a href="./cadastro.html">Fazer cadastro</a></div>
-
-                
+                    <a href="#">Esqueceu sua senha?</a>
+                    <a href="./cadastro.html">Fazer cadastro</a>
+                </div>
+                <p id="mensagem"></p>
+                <script src="./js/cadastro.js"></script>
             </div>
         </div>
     </main>

@@ -5,20 +5,32 @@ import { db } from "../database/db.js";
 export const loginRouter = Router()
 
 //Faz o login do usuário
+
+
 loginRouter.post('/api/login', async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
+
     try {
-        const user = await db.get("SELECT * FROM usuarios WHERE username = ? AND password = ?", [username, password]);
-        if (user) {
-            res.status(200).send("Login bem-sucedido");
-        } else {
-            res.status(401).send("Credenciais Inválidas.");
+        const user = await db.get("SELECT * FROM usuarios WHERE email = ?", [email]);
+
+        if (!user) {
+            return res.status(401).json({ error: "Credenciais Inválidas." });
         }
+
+        const passwordMatch = await bcrypt.compare(password, user.password);
+
+        if (!passwordMatch) {
+            return res.status(401).json({ error: "Credenciais Inválidas." });
+        }
+
+        res.status(200).json({ message: "Login bem-sucedido" });
+        
     } catch (error) {
         console.error("Erro ao verificar credenciais:", error);
-        res.status(500).send("Erro ao verificar credenciais.");
+        res.status(500).json({ error: "Erro interno do servidor." });
     }
 });
+
 
 // Rota para registrar usuário
 loginRouter.post('/api/register', async (req, res) => {
@@ -47,16 +59,17 @@ loginRouter.post('/api/register', async (req, res) => {
             console.log(hashedSenha);
 
             await db.run("INSERT INTO usuarios (username, email, password) VALUES (?, ?, ?)", [user, mail, hashedSenha]);
-            console.log("Usuário registrado com sucesso"); // Log quando o usuário é registrado com sucesso
+            console.log("Usuário registrado com sucesso"); 
             res.status(201).send("Usuário registrado com sucesso!");
         } else {
-            console.log("Campos faltando"); // Log quando campos estão faltando
+            console.log("Campos faltando"); 
             res.status(400).send("Por favor, preencha todos os campos.");
         }
     } catch (error) {
-        console.error("Erro ao registrar usuário:", error); // Log do erro no console
-        console.error(error.stack); // Log da stack trace do erro
+        console.error("Erro ao registrar usuário:", error); 
+        console.error(error.stack); 
         res.status(500).send("Erro ao registrar usuário.");
     }
+
 });
 

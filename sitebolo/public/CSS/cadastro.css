@@ -11,6 +11,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+
     min-height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
@@ -31,8 +32,10 @@ body {
 }
 .cadastro-cliente {
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 250px;
+    width: auto;
+    max-width: 290px;
+    height: auto;
+    max-height: 320px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -42,12 +45,13 @@ body {
 
 }
 
+
 .cadastro-cliente .titulo {
     margin-bottom: 10px;
 }
-
-.cadastro-cliente .cadastro a {
-    margin-bottom: 5px;
+.cadastro-cliente a{
+    color:#9A0000;
+    margin: 50px;
     text-align: left;
 }
 
@@ -57,18 +61,45 @@ body {
     border-radius: 3px;
     height: 25px;
     width: 95%;
-}
-
-.cadastro-cliente .botao-cadastrar {
+}.cadastro-cliente .botao-cadastrar {
     margin-top: 3px;
     background-color: #9A0000;
     border: 2px #FFF solid;
     border-radius: 4px;
-    padding: 4px 30px;
+    padding: 4px 40px;
     color: #fff;
+    transition: all 0.2s ease-in-out; /* Transição suave */
 }
 
-.cadastro-cliente.acesso {
+.cadastro-cliente .botao-cadastrar:active {
+    transform: translateY(3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de afundamento */
+}
+
+.container-login a {
+    color: #9A0000;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 15px;
+    text-align: left;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; /* Transição suave */
+}
+
+.container-login a:hover {
+    color: #660000; /* Cor do link ao passar o mouse */
+}
+
+.cadastro-cliente a {
+    color: #9A0000;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: left;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; /* Transição suave */
+}
+
+.cadastro-cliente a:hover {
+    color: #660000; /* Cor do link ao passar o mouse */
 }

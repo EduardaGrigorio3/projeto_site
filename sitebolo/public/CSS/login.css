@@ -61,14 +61,21 @@ body {
     flex-direction: column;
 }
 
-.login-cliente .butao-entrar {
+.login-cliente .botao-login {
     margin-top: 3px;
     background-color: #9A0000;
     border: 2px #FFF solid;
     border-radius: 4px;
     padding: 4px 40px;
     color: #fff;
+    transition: all 0.2s ease-in-out; /* Transição suave */
 }
+
+.login-cliente .botao-login:active {
+    transform: translateY(3px); /* Movendo o botão 4px para baixo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de afundamento */
+}
+
 
 .login-cliente a {
     margin-top: 15px;

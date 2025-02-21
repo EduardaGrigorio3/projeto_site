@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./CSS/paginaInicial.css">
     <link rel="stylesheet" href="./CSS/cabecalho.css">
     <link rel="stylesheet" href="./CSS/cadastro.css">
-    <script src="/js/cadastro.js"></script>
+    <script src="./js/cadastro.js"></script>
 </head>
 
 <body>
@@ -74,7 +74,7 @@
     <main>
         <div class="caminho-navegacao-wrapper">
             <nav class="caminho-navegacao">
-                <a href="paginaInicial.html">Página Inicial </a>
+                <a href="./login.html">Login </a>
                 <span> &gt; </span>
                 <span>Cadastro</span>
             </nav>
@@ -85,12 +85,15 @@
                 <h1 class="titulo">Cadastrar</h1>
                 <form id="formCadastro">
                     <input id="username" type="text" placeholder="Usuário" required>
-                    <input id="email" type="email" placeholder="Email" required> <!-- Campo de email -->
+                    <input id="email" type="email" placeholder="Email" required>
                     <input id="password" type="password" placeholder="Senha" required>
+                    <input id="password2" type="password" placeholder="Confirme a senha" required>
                     <button type="submit" class="botao-cadastrar">Cadastrar</button>
                 </form>
 
-                <p id="mensagem"></p> <!-- Adicione este elemento para exibir mensagens -->
+                <p id="mensagem"></p>
+                <a href="./login.html">Entrar</a>
+                <script src="./js/cadastro.js"></script>
             </div>
         </div>
     </main>
