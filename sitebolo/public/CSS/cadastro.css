@@ -1,6 +1,6 @@
 html, 
 body {
-    margin: 0;
+    
     padding: 0;
     height: 100%;
 }
@@ -31,19 +31,22 @@ body {
     height: 50px;
 }
 .cadastro-cliente {
+    display: flex;
     flex-wrap: wrap;
     width: auto;
     max-width: 290px;
-    height: auto;
-    max-height: 320px;
+    height: auto; 
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #9A0000;
     text-align: center;
-
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 
 .cadastro-cliente .titulo {
@@ -51,12 +54,12 @@ body {
 }
 .cadastro-cliente a{
     color:#9A0000;
-    margin: 50px;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .cadastro-cliente input {
-    margin-bottom: 15px;
+    margin: 10px;
     border: 1px #9A0000 solid;
     border-radius: 3px;
     height: 25px;
@@ -86,6 +89,7 @@ body {
     transition: color 0.2s ease-in-out; /* Transição suave */
 }
 
+
 .container-login a:hover {
     color: #660000; /* Cor do link ao passar o mouse */
 }
@@ -98,6 +102,9 @@ body {
     display: inline-block;
     text-decoration: none;
     transition: color 0.2s ease-in-out; /* Transição suave */
+}
+.botao-e-mensagem{
+   flex-direction: column ;
 }
 
 .cadastro-cliente a:hover {
