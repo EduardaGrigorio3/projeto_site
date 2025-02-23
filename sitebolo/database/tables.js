@@ -38,6 +38,7 @@ async function criaTabela() {
     } catch (error) {
         console.error("Erro ao criar tabelas:", error.message);
     }
+    
 }
 
 criaTabela().then(() => console.log("Execução concluída."));

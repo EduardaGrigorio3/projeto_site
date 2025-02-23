@@ -1,7 +1,5 @@
 window.addEventListener("load", () => {
     const mensagem = document.getElementById('mensagem');
-    formLogin.addEventListener("submit", async function (event) {
-        event.preventDefault();
   // Login de usuário
     const formLogin = document.getElementById('formLogin');
     if (formLogin) {
@@ -32,4 +30,4 @@ window.addEventListener("load", () => {
                 mensagem.style.color = 'red';
             }
         });
-    }});});
+    }});
