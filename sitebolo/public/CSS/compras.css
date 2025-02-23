@@ -44,9 +44,10 @@
 
 .titulo-produto {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
+    padding-right: 19px;
     margin-bottom: 10px;
 }
 
@@ -111,19 +112,12 @@
     transform: scale(1.1);
 }
 
-#quantidade {
+#quantidade0 {
     font-size: 20px;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 5px;
     width: 40px;
     text-align: center;
-}
-
-.excluir-produto p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #9A0000;
-    cursor: pointer;
 }
 
 .cupom-desconto {
@@ -226,8 +220,8 @@
 }
 
 .coluna img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border: 1px #9A0000 solid;
     border-radius: 4px;
 }
@@ -235,6 +229,25 @@
 
 .coluna p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
+}
+
+.remover-produto {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #9A0000;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.remover-produto:hover {
+    background-color: #9a0000ba;
+}
+
+#carrinho-produtos p{
+    display: flex;
+    justify-content: center;
 }

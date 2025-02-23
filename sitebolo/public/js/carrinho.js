@@ -1,5 +1,28 @@
 window.addEventListener("load", main);
 
+window.addEventListener("load", function () {
+    atualizarContadorCarrinho();
+});
+
+function atualizarContadorCarrinho() {
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || []; 
+    const contador = document.querySelector(".circulo-contador");
+
+    let quantidadeTotal = 0;
+   
+    carrinho.forEach(item => {
+        quantidadeTotal += item.quantidade; 
+    });
+
+    contador.textContent = quantidadeTotal;
+    
+    if (quantidadeTotal === 0) {
+        contador.style.display = "none"; 
+    } else {
+        contador.style.display = "inline-block"; 
+    }
+}
+
 function main() {
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     const carrinhoContainer = document.getElementById("carrinho-produtos");
@@ -28,7 +51,7 @@ function main() {
                 <div class="coluna">
                     <p>${item.sabor}</p>
                 </div>
-                <div class="coluna">
+                <div class="coluna">    
                     <div class="botao-quantidade-produto">
                         <button class="btn-diminuir" onclick="alterarQuantidade(${index}, -1)">−</button>
                         <span id="quantidade${index}">${item.quantidade}</span>
@@ -53,6 +76,8 @@ function main() {
         subtotalElem.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
         totalElem.textContent = `R$ ${(total + 5).toFixed(2).replace('.', ',')}`;
     }
+
+    atualizarContadorCarrinho()
 }
 
 function alterarQuantidade(index, quantidade) {
@@ -63,8 +88,8 @@ function alterarQuantidade(index, quantidade) {
     if (carrinho[index]) {
         carrinho[index].quantidade += quantidade;
 
-        if (carrinho[index].quantidade <= 0) {
-            carrinho.splice(index, 1);
+        if (carrinho[index].quantidade < 1) {
+            carrinho[index].quantidade = 1
         } else {
             document.getElementById(`quantidade${index}`).textContent = carrinho[index].quantidade;
             document.getElementById(`totalItem${index}`).textContent = `R$${(carrinho[index].preco * carrinho[index].quantidade).toFixed(2).replace('.', ',')}`;
@@ -74,7 +99,11 @@ function alterarQuantidade(index, quantidade) {
         subtotalElem.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
         totalElem.textContent = `R$ ${(total + 5).toFixed(2).replace('.', ',')}`;
 
+        // Atualiza o localStorage
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        // Atualiza a interface do carrinho
+        renderizarCarrinho();
     }
 }
 
@@ -95,6 +124,8 @@ function removerDoCarrinho(index) {
         // Re-renderiza os produtos no carrinho sem recarregar a página
         renderizarCarrinho();
     }
+
+    atualizarContadorCarrinho()
 }
 
 function renderizarCarrinho() {
@@ -125,7 +156,7 @@ function renderizarCarrinho() {
                 </div>
                 <div class="coluna">
                     <div class="botao-quantidade-produto">
-                        <button class="btn-diminuir" onclick="alterarQuantidade(${index}, -1)">−</button>
+                        <button class="btn-diminuir" onclick="alterarQuantidade(${index}, -1)"${item.quantidade === 1 ? "disabled" : ""}>−</button>
                         <span id="quantidade${index}">${item.quantidade}</span>
                         <button class="btn-aumentar" onclick="alterarQuantidade(${index}, 1)">+</button>
                     </div>
@@ -146,5 +177,6 @@ function renderizarCarrinho() {
         subtotalElem.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
         totalElem.textContent = `R$ ${(total + 5).toFixed(2).replace('.', ',')}`;
     }
+
 }
 
