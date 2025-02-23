@@ -31,16 +31,14 @@ async function main() {
                 <div class="opcoesSabores-container">
                     <label for="opcao${x}">Sabores:</label>
                     <select id="opcao${x}" class="opcoesSabores">
-                        
                         ${sabores.map(sabor => `<option value="${sabor}">${sabor}</option>`).join('')}
                     </select>
                 </div>
             </div>
             <div class="botao-container">
-                <button class="btn-comprar">Comprar</button>
+                <button class="btn-comprar"data-id="${x}" data-nome="${dados[x].nome}" data-preco="${dados[x].preco}" data-img="${dados[x].img}" data-quantidade="quantidade${x}" data-sabor="opcao${x}">Comprar</button>
                 <button class="btn-carrinho" data-id="${x}" data-nome="${dados[x].nome}" data-preco="${dados[x].preco}" data-img="${dados[x].img}" data-quantidade="quantidade${x}" data-sabor="opcao${x}">
-                    <i class="fa fa-shopping-cart"></i>
-                </button>
+                    <i class="fa fa-shopping-cart"></i></button>
             </div>
         </div>`;
 
@@ -54,7 +52,7 @@ async function main() {
     }
     
     // Adicionar evento de clique para os botões de carrinho
-    const carrinhoBotoes = document.querySelectorAll(".btn-carrinho");
+    const carrinhoBotoes = document.querySelectorAll(".btn-carrinho,.btn-comprar");
     carrinhoBotoes.forEach(botao => {
         botao.addEventListener("click", function() {
             const produtoId = this.getAttribute("data-id");
@@ -72,6 +70,9 @@ async function main() {
             }
 
             adicionarAoCarrinho(produtoId, nome, preco, img, sabor, quantidade);
+            if (this.classList.contains("btn-comprar")) {
+                window.location.href = "/compras.html"; // Redireciona para a página do carrinho
+            }
         });
     });
 }
@@ -99,10 +100,4 @@ function adicionarAoCarrinho(produtoId, nome, preco, img, sabor, quantidade) {
 
     console.log(carrinho); // Debug para ver se está separando os sabores corretamente
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    atualizarCarrinho();
-}
-
-function atualizarCarrinho() {
-    // Lógica para atualizar a exibição do carrinho
-    console.log("Carrinho atualizado.");
 }

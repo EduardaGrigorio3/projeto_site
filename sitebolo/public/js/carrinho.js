@@ -36,9 +36,8 @@ function main() {
                     </div>
                 </div>
                 <div class="coluna">
-                    <p id="unitario${index}"> Valor unitário: R$${(item.preco).toFixed(2).replace('.', ',')}</p>
-               
-                    <p id="totalItem${index}">  R$${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</p>
+                          
+                    <p id="totalItem${index}"> R$${(item.preco * item.quantidade).toFixed(2).replace('.', ',')}</p>
                 </div>
                 <div class="coluna">
                     <button class="remover-produto" onclick="removerDoCarrinho(${index})">Excluir produto</button>
