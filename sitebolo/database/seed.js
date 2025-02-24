@@ -14,6 +14,7 @@ const produtos = [
     { id: 8, tipo: "biscoito", img: "./images/Broa1.jpg", nome: "Broa de Bolo de Rolo 140g", preco: 6.00, sabor: "Goiaba", unidade: "Quantidade" },
 
 ];
+
 async function adicionarProdutos() {
     for (let x = 0; x < produtos.length; x++){
         await db.run(

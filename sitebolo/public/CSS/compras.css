@@ -101,6 +101,7 @@
     color: white;
     background-color: #9A0000;
     border: none;
+    margin: 0 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
@@ -112,7 +113,7 @@
     transform: scale(1.1);
 }
 
-#quantidade0 {
+#quantidade {
     font-size: 20px;
     font-weight: bold;
     padding: 0 5px;
