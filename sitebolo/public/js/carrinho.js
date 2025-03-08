@@ -212,9 +212,6 @@ function finalizarCompra() {
     botoesFinalizar.forEach(botao => {
         botao.addEventListener("click", function () {
             alert("Compra efetuada com sucesso!");
-
-            // Limpa o carrinho do localStorage
-            localStorage.removeItem("carrinho");
             
             window.location.href = "/paginaInicial.html"; // Redireciona para a página inicial
         });
