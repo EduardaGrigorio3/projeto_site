@@ -35,8 +35,8 @@ O projeto foi desenvolvido para a disciplina de **Desenvolvimento Web**. Criamos
 
 ### 1️⃣ Clonar o repositório:
 ```sh
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/EduardaGrigorio3/projeto_site.git
+cd seu-repositorio // no terminal do vsCode entre na pasta
 ```
 
 ### 2️⃣ Instalar dependências:
