@@ -5,21 +5,21 @@ window.addEventListener("load", function () {
 });
 
 function atualizarContadorCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || []; 
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     const contador = document.querySelector(".circulo-contador");
 
     let quantidadeTotal = 0;
-   
+
     carrinho.forEach(item => {
-        quantidadeTotal += item.quantidade; 
+        quantidadeTotal += item.quantidade;
     });
 
     contador.textContent = quantidadeTotal;
-    
+
     if (quantidadeTotal === 0) {
-        contador.style.display = "none"; 
+        contador.style.display = "none";
     } else {
-        contador.style.display = "inline-block"; 
+        contador.style.display = "inline-block";
     }
 }
 
@@ -127,6 +127,8 @@ function removerDoCarrinho(index) {
     atualizarContadorCarrinho()
 }
 
+let descontoAplicado = 0; // Variável global para manter o desconto aplicado
+
 function renderizarCarrinho() {
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     const carrinhoContainer = document.getElementById("carrinho-produtos");
@@ -174,8 +176,50 @@ function renderizarCarrinho() {
         });
 
         subtotalElem.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
-        totalElem.textContent = `R$ ${(total + 5).toFixed(2).replace('.', ',')}`;
-    }
 
+        // Aplica a taxa de entrega de R$5, mas mantém o desconto já aplicado
+        let totalComEntrega = total + 5;
+        let totalFinal = Math.max(totalComEntrega - descontoAplicado, 0); // Evita valores negativos
+
+        totalElem.textContent = `R$ ${totalFinal.toFixed(2).replace('.', ',')}`;
+    }
 }
 
+document.getElementById("adicionar-cupom").addEventListener("click", aplicarCupom);
+
+function aplicarCupom() {
+    const cupomInput = document.getElementById("numero-cupom").value.trim();
+
+    // Lista de cupons válidos com seus respectivos descontos
+    const cupons = {
+        "DESCONTO10": 10, // R$10 de desconto
+        "DESCONTO20": 20, // R$20 de desconto
+        "DESCONTO30": 30  // R$30 de desconto
+    };
+
+    if (cupons[cupomInput]) {
+        descontoAplicado = cupons[cupomInput]; // Armazena o desconto globalmente
+        renderizarCarrinho(); // Atualiza o carrinho com o desconto aplicado
+        alert(`Cupom aplicado! Desconto de R$ ${descontoAplicado.toFixed(2).replace('.', ',')}`);
+    } else {
+        alert("Cupom inválido!");
+    }
+}
+
+function finalizarCompra() {
+    const botoesFinalizar = document.querySelectorAll(".botao-finalizar");
+
+    botoesFinalizar.forEach(botao => {
+        botao.addEventListener("click", function () {
+            alert("Compra efetuada com sucesso!");
+
+            // Limpa o carrinho do localStorage
+            localStorage.removeItem("carrinho");
+            
+            window.location.href = "/paginaInicial.html"; // Redireciona para a página inicial
+        });
+    });
+}
+
+// Chamando a função após o carregamento da página
+document.addEventListener("DOMContentLoaded", finalizarCompra);

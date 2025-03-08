@@ -64,11 +64,6 @@ async function main() {
             const quantidade = parseInt(document.getElementById(quantidadeInputId).value);
             const sabor = document.getElementById(saborSelectId).value;
 
-            if (sabor === "") {
-                alert("Por favor, selecione um sabor antes de adicionar ao carrinho.");
-                return;
-            }
-
             adicionarAoCarrinho(produtoId, nome, preco, img, sabor, quantidade);
             if (this.classList.contains("btn-comprar")) {
                 window.location.href = "/compras.html"; // Redireciona para a página do carrinho
@@ -97,7 +92,8 @@ function adicionarAoCarrinho(produtoId, nome, preco, img, sabor, quantidade) {
             sabor: sabor
         });
     }
-
+    alert("Produto adiconado ao carrinho!")
     console.log(carrinho); // Debug para ver se está separando os sabores corretamente
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
+

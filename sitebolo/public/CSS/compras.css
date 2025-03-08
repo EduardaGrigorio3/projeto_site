@@ -252,3 +252,19 @@
     display: flex;
     justify-content: center;
 }
+
+.circulo-contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    background-color: red; /* Cor do círculo */
+    color: white; /* Cor do texto */
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%; /* Deixa o contador circular */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
