@@ -1,3 +1,5 @@
+🍰 Site de Bolo de Rolo
+
 Projeto desenvolvido para a disciplina de Desenvolvimento Web. O site foi criado para apresentar produtos, dicas e informações sobre um negócio de venda de bolo de rolo.
 
 🚀 Tecnologias Utilizadas:
