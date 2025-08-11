@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
 
                     // Aguarda um pequeno tempo antes de redirecionar para garantir que o usuário veja a mensagem
                     setTimeout(() => {
-                        window.location.href = "/paginaInicial.html"; // Redireciona para a página inicial
+                        window.location.href = "/index.html"; // Redireciona para a página inicial
                     }, 1000);
                 } else {
                     mensagem.textContent = result.error || "Erro ao efetuar login.";

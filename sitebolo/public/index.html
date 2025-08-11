@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas | PratiBom</title>
+    <title>PratiBom melhor bolo de rolo de Pernambuco</title>
     <link rel="stylesheet" href="./CSS/globals.css">
-    <link rel="stylesheet" href="./CSS/rodape.css">
-    <link rel="stylesheet" href="./CSS/dicas.css">
+    <link rel="stylesheet" href="./CSS/paginaInicial.css">
     <link rel="stylesheet" href="./CSS/cabecalho.css">
+    <link rel="stylesheet" href="./CSS/rodape.css">
+
+    <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -69,65 +71,68 @@
             </div>
         </div>
     </header>
+
     <main>
         <section>
             <div class="opcoes">
                 <nav>
                     <ul>
-                        <li><a href="index.html">PAGINA INICIAL |</a></li>
                         <li><a href="quemSomos.html">QUEM SOMOS |</a></li>
                         <li><a href="produto.html">PRODUTOS |</a></li>
                         <li><a href="contato.html">CONTATO |</a></li>
                         <li><a href="clientes.html">CLIENTES |</a></li>
-                        
+                        <li><a href="dicas.html">DICAS</a></li>
                     </ul>
                 </nav>
             </div>
         </section>
-        <div class="caminho-navegacao-wrapper">
-            <nav class="caminho-navegacao">
-            <a href="index.html">Página Inicial </a>
-            <span> &gt; </span>
-            <span>Dicas</span>
-        </nav>
+
+        <div class="img-decorativa">
+            <img src="./images/imagemFundo.png" alt="imagem com vários bolos de rolo">
         </div>
 
-        <section class="dicas-consumo">
-            <h1 id="titulo-consumo">Como consumir</h1>
-            <div class="consumo">
-                <p><strong>temperatura ideal:</strong> O bolo de rolo é ainda mais gostoso em temperatura ambiente, mas
-                    se preferir,
-                    aqueça uma fatia no micro-ondas por 10 segundos para intensificar o sabor.
-                </p>
-                <br>
-                <p><strong>Melhor corte:</strong> Para uma experiência única, corte fatias finas e aprecie camada por
-                    camada.</p>
+        <section>
+            <div class="linha-com-texto">
+                <span class="linha1"></span>
+                <span class="texto">DESTAQUES</span>
+                <span class="linha2"></span>
             </div>
         </section>
 
-        <section class="dicas-combinacao">
-            <h1 id="titulo-combinacao">Combinações</h1>
-            <div class="combinacao">
-                <p><strong>Bebidas quentes:</strong> Café, chá de frutas ou chocolate quente são perfeitos.</p>
-                <br>
-                <p><strong>Bebidas frias:</strong> Experimente com suco de laranja ou um espumante suave para ocasiões
-                    especiais.</p>
-                <br>
-                <p><strong>Sobremesas:</strong> Sirva com sorvete de creme ou baunilha para uma experiência única.</p>
-            </div>
-        </section>
-
-        <section class="dicas-conservacao">
-            <h1 id="titulo-conservacao">Conservação</h1>
-            <div class="conservacao">
-                <p><strong>Após aberto:</strong> conserve em um recipiente fechado e mantenha em local fresco.</p>
-                <br>
-                <p><strong>Na geladeira:</strong> pode durar até 7 dias com o mesmo sabor e textura.</p>
-                <br>
-                <p><strong>Longo período:</strong> você pode congelar por até 3 meses e descongelar em temperatura
-                    ambiente.</p>
-            </div>
-        </section>
+        <div class="destaque-produto">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="produto.html#bolos" class="imagem-com-degrade"
+                            style="background-image: linear-gradient(5deg, rgba(0, 2, 8, 0.785) 23.83%, rgba(0, 0, 0, 0.10) 40%), url('images/boloTradicional.jpg');">
+                            <span class="texto-sobre-imagem">BOLOS</span>
+                            <span class="texto-saiba-mais">SAIBA MAIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html#biscoitos" class="imagem-com-degrade"
+                            style="background-image: linear-gradient(5deg, rgba(0, 2, 8, 0.785) 23.83%, rgba(0, 0, 0, 0.10) 40%), url('images/biscoito.jpg');">
+                            <span class="texto-sobre-imagem">BISCOITOS</span>
+                            <span class="texto-saiba-mais">SAIBA MAIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html#mini-bolinhos" class="imagem-com-degrade"
+                            style="background-image: linear-gradient(5deg, rgba(0, 2, 8, 0.785) 23.83%, rgba(0, 0, 0, 0.10) 40%), url('images/fotoMiniB.jpg');">
+                            <span class="texto-sobre-imagem">MINI BOLINHOS</span>
+                            <span class="texto-saiba-mais">SAIBA MAIS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produto.html#NakedCake" class="imagem-com-degrade"
+                            style="background-image: linear-gradient(5deg, rgba(0, 2, 8, 0.785) 23.83%, rgba(0, 0, 0, 0.10) 40%), url('images/NackedCake.jpg');">
+                            <span class="texto-sobre-imagem">NAKED CAKE</span>
+                            <span class="texto-saiba-mais">SAIBA MAIS</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <article>
             <div class="siga-rede-social">
@@ -151,7 +156,7 @@
             </div>
         </article>
     </main>
-
+    
     <script src="carrinho.js"></script>
 
     <footer class="rodape">
@@ -189,6 +194,7 @@
     <footer class="rodape-final">
         <p>&copy; 2024 PratiBom. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 
 </html>

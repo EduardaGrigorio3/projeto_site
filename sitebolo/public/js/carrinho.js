@@ -213,7 +213,7 @@ function finalizarCompra() {
         botao.addEventListener("click", function () {
             alert("Compra efetuada com sucesso!");
             
-            window.location.href = "/paginaInicial.html"; // Redireciona para a página inicial
+            window.location.href = "/index.html"; // Redireciona para a página inicial
         });
     });
 }
