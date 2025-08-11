@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "db:table": "node ./database/tables.js",
     "db:seed": "node ./database/seed.js"
   },
