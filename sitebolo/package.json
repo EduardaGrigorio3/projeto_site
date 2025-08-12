@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "prestart": "npm run db:table && npm run db:seed",
     "db:table": "node ./database/tables.js",
     "db:seed": "node ./database/seed.js"
   },
